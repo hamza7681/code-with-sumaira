@@ -1,3 +1,4 @@
+//  Hoisting
 // const x = 1;
 // function callEx() {
 //   console.log(x);
