@@ -1,31 +1,32 @@
 import React from "react";
-import ComponentB from "./ComponentB";
-import "./style.css";
 
-const ComponentA = ({ name, address, click }) => {
-  return (
-    <>
-      <h1 className="heading">My name is {name}</h1>
-      <h1 className="text-red-500 bg-black text-[32px] capitalize px-[10px] py-[10px]">
-        My address is {address}
-      </h1>
-      <button onClick={click}>Click</button>
-      <ComponentB newName={name} />
-    </>
-  );
-};
+class ComponentA extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "Hamza",
+      age: 25,
+    };
+  }
+  changeData = () => {
+    this.setState({ name: "Ali", age: 22 });
+  };
+  render() {
+    return (
+      <>
+        <h1 className="text-[24px]">
+          This is class component and my name is {this.state.name}, my age is{" "}
+          {this.state.age}
+        </h1>
+        <button
+          className="bg-green-500 text-white p-4"
+          onClick={this.changeData}
+        >
+          Button of Class
+        </button>
+      </>
+    );
+  }
+}
 
 export default ComponentA;
-
-// class ComponentA extends React.Component {
-//   name = "Hamza";
-//   render() {
-//     return (
-//       <>
-//         <h1>My name is {this.name}</h1>
-//       </>
-//     );
-//   }
-// }
-
-// export default ComponentA;
