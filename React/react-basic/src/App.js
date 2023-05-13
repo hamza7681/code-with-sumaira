@@ -2,6 +2,7 @@ import "./App.css";
 // import ComponentA from "./components/ComponentA";
 import ComponentB from "./components/ComponentB";
 import Register from "./components/Register";
+import UseEffectComp from "./components/UseEffectComp";
 
 function App() {
   // const name = "Hamza";
@@ -19,7 +20,8 @@ function App() {
       </p>
       <ComponentA name={name} address={address} click={clickMe} /> */}
       {/* <ComponentB /> */}
-      <Register />
+      {/* <Register /> */}
+      <UseEffectComp />
     </>
   );
 }
