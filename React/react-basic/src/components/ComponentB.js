@@ -12,7 +12,7 @@ const ComponentB = () => {
   const [cPasswordErr, setCPasswordErr] = useState("");
 
   const changeData = () => {
-    setName("Ali");
+    setName("Ali jan");
     setAge(22);
   };
 
